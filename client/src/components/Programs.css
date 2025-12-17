@@ -1,0 +1,51 @@
+.programs-section {
+  padding: 50px 10%; /* Spacing on sides */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  border-bottom: 3px solid #ff3b3b; /* Red underline */
+  display: inline-block;
+}
+
+/* This grid layout puts the cards in a row */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.program-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Adds a soft shadow */
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.program-card:hover {
+  transform: translateY(-10px); /* Moves up slightly on hover */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.program-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.program-card h3 {
+  margin: 15px 0 10px;
+  color: #1a1a1a;
+}
+
+.program-card p {
+  padding: 0 20px 20px;
+  color: #666;
+  font-size: 14px;
+}
