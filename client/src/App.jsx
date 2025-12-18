@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Programs from './components/Programs'
 import Footer from './components/Footer'
+import Admin from './Admin'
 
 // Import Pages
 import Workouts from './pages/Workouts'
@@ -31,6 +32,7 @@ function App() {
         {/* Other Pages */}
         <Route path="/workouts" element={<Workouts />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
         
         {/* The Detail Page (Dynamic) */}
         <Route path="/program/:id" element={<ProgramDetail />} />

@@ -55,6 +55,15 @@ app.get('/seed', async (req, res) => {
     // You don't need to change this part, it's fine.
     res.send("Seed route is active (use your previous seed data if needed)")
 })
+// --- NEW: GET ALL MESSAGES (For Admin) ---
+app.get('/contacts', async (req, res) => {
+    try {
+        const messages = await ContactModel.find()
+        res.json(messages)
+    } catch (error) {
+        res.status(500).json({ error: "Failed to fetch messages" })
+    }
+})
 
 // --- HANDLE CONTACT FORM (FIXED) ---
 app.post('/contact', async (req, res) => {  // Added 'async'
@@ -62,6 +71,7 @@ app.post('/contact', async (req, res) => {  // Added 'async'
     
     console.log("--- NEW MESSAGE RECEIVED ---")
     console.log("From:", name)
+    
     
     try {
         // 1. Create the new contact document
